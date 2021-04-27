@@ -1,0 +1,32 @@
+.app-wrapper {
+	.logo-wrapper {
+    height: $topBarHeight;
+		cursor: pointer;
+		display: flex;
+		padding: 0 $commonPadding;
+		.logo-pc{
+			width: 100%;
+			justify-content: left;
+			.site-name{
+	      color: #FFF;
+		    font-size: 18px;
+		    margin: 0 0 0 $commonPadding / 2;
+				transition: .15s;
+
+			}
+		}
+		.small-logo{
+			width: 32px;
+			height: 32px;
+		}
+		&.collapsed{
+			.logo-pc {
+				justify-content: center;
+			}
+			.site-name{
+				transform: scale(0);
+				display: none;
+			}
+		}
+  }
+}

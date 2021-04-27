@@ -1,0 +1,41 @@
+.app-wrapper {
+  position: relative;
+
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .main-container {
+    position: relative;
+    padding: $mainContainerPadding;
+    background-color: $mainContainerBg;
+
+    // 区块全局容器，所有区块都以此容器包装.
+    .basic-container {
+      // ...
+    }
+
+    .raw {
+      .basic-container {
+        padding: 0;
+        background-color: transparent;
+      }
+    }
+  }
+
+  &.mobile {
+    .main-container {
+      padding: 0px;
+      padding-top: 10px;
+      padding-bottom: $mainContainerPadding;
+      border-top: solid 1px $mainContainerBg;
+
+      .basic-container {
+        padding: 5px;
+        border-radius: 0px;
+      }
+    }
+  }
+}

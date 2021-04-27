@@ -1,0 +1,56 @@
+.app-wrapper {
+  .tabs-list {
+    margin-top: $tabsMargin;
+    padding-left: $tabsMargin;
+    padding-right: $tabsMargin;
+
+    /deep/ .el-tabs__header {
+      margin-bottom: 0px;
+    }
+
+    /deep/ .el-tabs__item {
+      &:focus.is-active.is-focus:not(:active) {
+        box-shadow: none;
+      }
+    }
+
+    /deep/ .el-tabs__nav-next,
+    /deep/ .el-tabs__nav-prev {
+      i {
+        font-weight: bold;
+        font-size: $tabsNavFontSize;
+      }
+    }
+
+    &:empty {
+      display: none;
+    }
+  }
+
+  .tabs-contextmenu {
+    position: fixed;
+    width: 120px;
+    min-width: 116px;
+    background-color: $tabsContextMenuBg;
+    border: $tabsContextMenuBorder;
+    border-radius: $tabsContextMenuBorderRadius;
+    padding: $tabsContextMenuPadding;
+    border-top: none;
+    z-index: 99999999;
+
+    .tabs-contextmenu-item {
+      line-height: $tabsContextMenuItemHeight;
+      cursor: pointer;
+
+      /deep/ .el-link {
+        display: block;
+        padding: 0 18px;
+        font-weight: normal;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

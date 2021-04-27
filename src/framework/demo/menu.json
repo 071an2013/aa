@@ -1,0 +1,212 @@
+{
+  "menus": [
+    {
+      "name": "Dashboard",
+      "icon": "el-icon-s-home",
+      "path": "/demo/pages/dashboard",
+      "children": [
+        {
+          "name": "通用",
+          "path": "/common",
+          "icon": "el-icon-menu"
+        },
+        {
+          "name": "信息展示",
+          "path": "/message",
+          "icon": "el-icon-menu"
+        }
+      ]
+    },
+    {
+      "name": "表单示例",
+      "icon": "el-icon-edit-outline",
+      "path": "/demo/pages/form",
+      "perm": "/perm/code/1",
+      "children": [
+        {
+          "name": "简单表单",
+          "path": "/basic-form",
+          "icon": "el-icon-menu",
+          "tab-group": "app-demo"
+        },
+        {
+          "name": "分步表单",
+          "path": "/step-form",
+          "icon": "el-icon-menu",
+          "tab-group": "app-demo"
+        }
+      ]
+    },
+    {
+      "name": "表格示例",
+      "icon": "el-icon-s-grid",
+      "path": "/demo/pages/table",
+      "children": [
+        {
+          "name": "简单表格",
+          "path": "/select-table",
+          "icon": "el-icon-menu",
+          "perm": "/perm/code/1",
+          "tab-group": "table-demo"
+        },
+        {
+          "name": "查询表格",
+          "path": "/query-table",
+          "icon": "el-icon-menu",
+          "perm": "/perm/code/2",
+          "tab-group": "table-demo"
+        },
+        {
+          "name": "固定列表格",
+          "path": "/fixed-table",
+          "icon": "el-icon-menu",
+          "perm": "/perm/code/1",
+          "tab-group": "table-demo"
+        },
+        {
+          "name": "页签表格",
+          "path": "/tab-table",
+          "icon": "el-icon-menu",
+          "perm": "/perm/code/2",
+          "tab-group": "table-demo"
+        }
+      ]
+    },
+    {
+      "name": "信息展示",
+      "icon": "el-icon-info",
+      "path": "/demo/pages/details",
+      "children": [
+        {
+          "name": "菜单小红点",
+          "path": "/menu-badge",
+          "icon": "el-icon-menu"
+        },
+        {
+          "name": "概要信息",
+          "path": "/data-display",
+          "icon": "el-icon-menu"
+        },
+        {
+          "name": "消息列表",
+          "path": "/message-list",
+          "icon": "el-icon-menu"
+        },
+        {
+          "name": "轮播",
+          "path": "/slider",
+          "icon": "el-icon-menu"
+        }
+      ]
+    },
+    {
+      "name": "异常信息",
+      "icon": "el-icon-error",
+      "path": "/demo/pages/exception",
+      "children": [
+        {
+          "name": "500",
+          "path": "/basic-exception",
+          "icon": "el-icon-menu"
+        },
+        {
+          "name": "404",
+          "path": "/basic-not-found",
+          "icon": "el-icon-menu"
+        },
+        {
+          "name": "403",
+          "path": "/not-permission",
+          "icon": "el-icon-menu"
+        },
+        {
+          "name": "无内容",
+          "path": "/empty-content"
+        }
+      ]
+    },
+    {
+      "name": "子级外链1",
+      "icon": "el-icon-link",
+      "path": "/group1",
+      "children": [
+        {
+          "name": "iframe外链(百度)",
+          "icon": "el-icon-check",
+          "path": "/iframe/?url=https://www.baidu.com?a"
+        },
+        {
+          "name": "iframe外链(美菜)",
+          "icon": "el-icon-check",
+          "path": "/iframe/?url=https://www.meicai.cn"
+        },
+        {
+          "name": "外链示例",
+          "icon": "el-icon-check",
+          "path": "https://www.google.com?a"
+        }
+      ]
+    },
+    {
+      "name": "子级外链2",
+      "icon": "el-icon-link",
+      "path": "/group2",
+      "children": [
+        {
+          "name": "iframe外链(百度)",
+          "icon": "el-icon-check",
+          "path": "/iframe/?url=https://www.baidu.com"
+        },
+        {
+          "name": "iframe外链(美菜)",
+          "icon": "el-icon-check",
+          "path": "/iframe/?url=https://www.meicai.cn"
+        },
+        {
+          "name": "外链示例",
+          "icon": "el-icon-check",
+          "path": "https://www.baidu.com"
+        }
+      ]
+    },
+    {
+      "name": "图表",
+      "icon": "el-icon-picture",
+      "path": "/demo/pages/charts",
+      "children": [
+        {
+          "name": "基础图表",
+          "path": "/basic",
+          "icon": "el-icon-menu",
+          "children": [
+            {
+              "name": "line",
+              "path": "/line",
+              "icon": "el-icon-menu"
+            },
+            {
+              "name": "bar",
+              "path": "/bar",
+              "icon": "el-icon-menu"
+            },
+            {
+              "name": "pie",
+              "path": "/pie",
+              "icon": "el-icon-menu"
+            }
+          ]
+        },
+        {
+          "name": "复杂图表",
+          "path": "/complex",
+          "icon": "el-icon-menu"
+        }
+      ]
+    },
+    {
+      "name": "外链示例",
+      "icon": "el-icon-top-right",
+      "path": "https://www.google.com"
+    }
+  ]
+}

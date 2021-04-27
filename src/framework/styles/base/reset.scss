@@ -1,0 +1,76 @@
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+}
+
+html,
+body,
+.fill-in {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  // ! 注释掉text-rendering，是因为，这个会造成在Safari13上面输入中文时卡顿（王娜提供）。
+  //text-rendering: optimizeLegibility;
+  background-color: $appBg;
+  color: $appTextColor;
+  font-family: $appFontFamily;
+  font-size: $appFontSize;
+  font-variant: $appFontVariant;
+}
+
+a {
+  color: inherit;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:active {
+  outline: none;
+}
+
+// 滚动条样式.
+::-webkit-scrollbar-thumb {
+  background-color: $appScrollbarColor;
+  border-radius: $appScrollbarSize;
+}
+
+::-webkit-scrollbar-track-piece {
+  background: transparent;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar {
+  width: $appScrollbarSize;
+  height: $appScrollbarSize;
+}
+
+// 选中文本样式.
+::selection {
+  background: $appSelectionBg;
+  color: $appSelectionTextColor;
+}
+
+// 菜单部分以及交互元素不允许高亮
+button,
+.el-menu {
+  user-select: none;
+}

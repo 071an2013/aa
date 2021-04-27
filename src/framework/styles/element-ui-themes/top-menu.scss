@@ -1,0 +1,94 @@
+@mixin top-menu-common(
+	$mainMenuItemTextColor,
+	$mainMenuItemTextColor_Current,
+	$mainMenuItemBg_Current,
+	$mainMenuItemFontSize,
+	$mainMenuItemPadding,
+	$mainMenuItemHeight
+) {
+  display: inline-block;
+  border-bottom: none!important;
+  background-color: transparent;
+  .el-menu-item, .el-submenu__title{
+    font-size: $mainMenuItemFontSize;
+    color: $mainMenuItemTextColor;
+    > i {
+      color: $mainMenuItemTextColor!important;
+    }
+    background-color: transparent!important;
+    &:hover,
+    &:focus,
+    &:hover > i,
+    &:focus > i{
+      color: $mainMenuItemTextColor_Current!important;
+    }
+  }
+  .el-menu-item, .el-submenu{
+    position: relative;
+    border-bottom: none;
+    &.is-active{
+      border-bottom: none;
+      color: $mainMenuItemTextColor_Current!important;
+      > .el-submenu__title{
+        border-bottom: none;
+        color: $mainMenuItemTextColor_Current!important;
+        i {
+          color: $mainMenuItemTextColor_Current!important;
+        }
+      }
+      &:after{
+        content: '';
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0px $menuCurrentArrowSize $menuCurrentArrowSize $menuCurrentArrowSize;
+        border-color: transparent transparent $menuCurrentArrowColor transparent;
+        position: absolute;
+        bottom: 0;
+        left: calc(50% - 4px);
+      }
+    }
+  }
+  .moreMenu > .el-submenu__title {
+    .el-submenu__icon-arrow {
+      display: none;
+    }
+    span {
+      display: inline-block;
+      transform: translateY(-4px);
+    }
+  }
+  .el-menu-item {
+    height: $topBarHeight;
+    line-height: $topBarHeight - 2;
+    &:hover, &:focus{
+      color: $mainMenuItemTextColor_Current;
+    }
+  }
+  .el-submenu__title {
+    height: $topBarHeight;
+    line-height: $topBarHeight - 2;
+  }
+}
+
+.top-menu.el-menu {
+	@include top-menu-common(
+		$topMenuItemTextColor,
+		$topMenuItemTextColor_Current,
+		$topMenuItemBg_Current,
+		$topMenuItemFontSize,
+		$topMenuItemPadding,
+		$topMenuItemHeight
+	)
+}
+
+.top-main-menu.el-menu {
+	@include top-menu-common(
+		$topMenuItemTextColor,
+		$topMenuItemTextColor_Current,
+		$topMenuItemBg_Current,
+		$topMenuItemFontSize,
+		$topMenuItemPadding,
+		$topMenuItemHeight
+	)
+}

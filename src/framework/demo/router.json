@@ -1,0 +1,93 @@
+{
+  "pages": [
+    {
+      "name": "basic-form",
+      "path": "/demo/pages/form/basic-form"
+    },
+    {
+      "name": "step-form",
+      "path": "/demo/pages/form/step-form"
+    },
+    {
+      "name": "select-table",
+      "path": "/demo/pages/table/select-table"
+    },
+    {
+      "name": "select-table-detail",
+      "path": "/demo/pages/table/select-table/details",
+      "router": "/demo/pages/table/select-table/:id",
+      "meta": {
+        "title": "详情页",
+        "menu": "/demo/pages/table/select-table"
+      }
+    },
+    {
+      "name": "fixed-table",
+      "path": "/demo/pages/table/fixed-table"
+    },
+    {
+      "name": "tab-table",
+      "path": "/demo/pages/table/tab-table"
+    },
+    {
+      "name": "query-table",
+      "path": "/demo/pages/table/query-table"
+    },
+    {
+      "name": "data-display",
+      "path": "/demo/pages/details/data-display"
+    },
+    {
+      "name": "message-list",
+      "path": "/demo/pages/details/message-list"
+    },
+    {
+      "name": "slider",
+      "path": "/demo/pages/details/slider"
+    },
+    {
+      "name": "menu-badge",
+      "path": "/demo/pages/details/menu-badge"
+    },
+    {
+      "name": "basic-exception",
+      "path": "/demo/pages/exception/basic-exception"
+    },
+    {
+      "name": "basic-not-found",
+      "path": "/demo/pages/exception/basic-not-found"
+    },
+    {
+      "name": "not-permission",
+      "path": "/demo/pages/exception/not-permission"
+    },
+    {
+      "name": "empty-content",
+      "path": "/demo/pages/exception/empty-content"
+    },
+    {
+      "name": "basic-chart-line",
+      "path": "/demo/pages/charts/basic/line"
+    },
+    {
+      "name": "basic-chart-bar",
+      "path": "/demo/pages/charts/basic/bar"
+    },
+    {
+      "name": "basic-chart-pie",
+      "path": "/demo/pages/charts/basic/pie"
+    },
+    {
+      "name": "complex-chart",
+      "path": "/demo/pages/charts/complex"
+    },
+    {
+      "name": "dashboard-common",
+      "path": "/demo/pages/dashboard/common"
+    },
+    {
+      "name": "dashboard-message",
+      "path": "/demo/pages/dashboard/message"
+    }
+  ]
+}

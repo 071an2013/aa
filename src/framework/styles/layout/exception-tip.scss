@@ -1,0 +1,34 @@
+.app-wrapper {
+  .exception-message-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+    height: 100%;
+
+    .exception-img {
+      margin-right: 1.5em;
+
+      img {
+        width: 220px;
+      }
+    }
+
+    .exception-message {
+      line-height: 2em;
+      font-size: 14px;
+
+      .title {
+        color: rgb(51, 51, 51);
+      }
+
+      .description {
+        color: rgb(102, 102, 102);
+
+        a {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

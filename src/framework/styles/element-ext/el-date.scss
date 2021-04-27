@@ -1,0 +1,109 @@
+/**
+ * 日期选择器, 区间背景色调整。
+ * 解决区间背景色不明显的问题。
+ */
+.el-date-table td.in-range div,
+.el-date-table td.in-range div:hover {
+  background-color: #A0CFFF;
+}
+
+/**
+  * 日期选择器，面板整体变小。
+  * element-ui 原生的时间选择面板中的元素间距过大。
+  */
+.el-date-range-picker {
+  width: 475px;
+
+  .el-picker-panel__body {
+    min-width: 400px;
+  }
+}
+
+.el-date-range-picker__content {
+  padding: 8px;
+}
+
+.el-date-range-picker__header {
+  height: 20px;
+}
+
+.el-date-range-picker.has-sidebar {
+  width: 605px;
+}
+
+.el-date-table td {
+  height: 18px;
+
+  div {
+    height: 18px;
+    padding: 0;
+  }
+
+  span {
+    height: 18px;
+    width: 18px;
+    line-height: 18px;
+  }
+}
+
+.el-date-picker {
+  width: 232px;
+
+  .el-picker-panel__content {
+    width: 232px;
+    margin: 0;
+  }
+}
+
+.el-date-range-picker__header div,
+.el-date-picker__header-label {
+  font-size: 14px;
+}
+
+.el-picker-panel {
+  line-height: 18px;
+}
+
+.el-picker-panel {
+  margin-top: 5px;
+}
+
+/**
+  * 日期面板带快捷选项缩小
+ */
+.el-date-picker.has-sidebar {
+  width: 350px;
+
+  &.has-time {
+    width: 350px;
+  }
+}
+
+.el-picker-panel__shortcut {
+  font-size: 12px;
+}
+
+/**
+  * 时间选择框缩小
+ */
+.el-time-panel {
+  width: 120px;
+}
+
+/**
+  * 解决面板缩小后，输入框会遮挡文字
+  * @TODO 先注释掉，此全局生效，需要重构。
+ */
+// .el-input__inner {
+//   padding: 0 10px;
+// }
+
+/**
+  * element-ui部分盒子是标准盒模型
+  * rad统一适配IE盒模型
+  * 不同的盒模型造成部分盒子遮挡文字
+  * 需要修改为统一的盒模
+ */
+.el-date-editor .el-range-separator {
+  box-sizing: content-box;
+}

@@ -1,0 +1,109 @@
+.app-wrapper {
+  .top-bar {
+    height: $topBarHeight;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding: 0 1em;
+    z-index: 9;
+
+    .top-bar-left {
+      width: auto;
+      margin-right: 1em;
+    }
+
+    .top-bar-menu {
+      flex: 1;
+      overflow: hidden;
+      margin-right: 1em;
+
+      /deep/>.el-menu {
+        .el-menu-item:first-child {
+          padding-left: 0px;
+        }
+      }
+    }
+
+    .top-bar-right {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      width: auto;
+    }
+
+    &.mobile {
+      background: $leftPaneBg !important;
+
+      .top-bar-left {
+        flex: 1;
+        display: flex;
+      }
+    }
+  }
+
+  .top-toolbar {
+    display: flex;
+    align-items: center;
+
+    .user-profile-content .user-info,
+    .el-dropdown-link,
+    .top-bar-icon {
+
+      position: relative;
+      color: rgba(255, 255, 255, .8);
+
+      &:hover {
+        color: rgba(255, 255, 255, 1);
+      }
+
+      .el-icon-user-solid {
+        font-size: 16px;
+        margin-right: 5px;
+      }
+
+      .user-avatar {
+        width: 24px;
+        height: 24px;
+        margin: 0 8px 0 12px;
+        border-radius: 4px;
+      }
+    }
+
+    &.dark {
+
+      .user-profile-content .user-info,
+      .el-dropdown-link,
+      .top-bar-icon {
+        color: rgba(0, 0, 0, .6);
+
+        &:hover {
+          color: rgba(0, 0, 0, 1);
+        }
+      }
+    }
+  }
+
+  // 菜单在左侧时
+  .header-left-main-layout {
+    .top-bar {
+      background: #FFF;
+      box-shadow: 0 1px 4px rgba(0, 21, 41, .08);
+    }
+  }
+
+  // 菜单在左侧与顶部时
+  .header-left-menus-main-layout {
+    .top-bar {
+      height: $topBarHeight;
+      background-color: $topBarBg;
+    }
+  }
+
+  // 菜单在顶部时
+  .header-main-layout {
+    .top-bar {
+      height: $topBarHeight;
+      background-color: $topBarBg;
+    }
+  }
+}

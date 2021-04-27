@@ -1,0 +1,148 @@
+/**
+ * 原子性规范 - 排版字体。
+ */
+
+body {
+  font-family: PingFang SC,
+    Hiragino Sans GB,
+    Microsoft YaHei,
+    San Francisco,
+    Helvetica Neue,
+    Arial;
+  line-height: 1.5em;
+  letter-spacing: 0px;
+}
+
+// 一级字体
+@mixin font_1A {
+  font-size: 18px;
+  color: #303133;
+  font-weight: bold;
+}
+
+.font_1A {
+  @include font_1A;
+}
+
+@mixin font_1B {
+  font-size: 18px;
+  color: #303133;
+  font-weight: normal;
+}
+
+.font_1B {
+  @include font_1B;
+}
+
+// 二级字体
+@mixin font_2A {
+  font-size: 16px;
+  color: #303133;
+  font-weight: bold;
+}
+
+.font_2A {
+  @include font_2A;
+}
+
+@mixin font_2B {
+  font-size: 16px;
+  color: #303133;
+  font-weight: normal;
+}
+
+.font_2B {
+  @include font_2B;
+}
+
+// 三级字体
+@mixin font_3A {
+  font-size: 14px;
+  color: #303133;
+  font-weight: bold;
+}
+
+.font_3A {
+  @include font_3A;
+}
+
+@mixin font_3B {
+  font-size: 14px;
+  color: #303133;
+  font-weight: normal;
+}
+
+.font_3B {
+  @include font_3B;
+}
+
+@mixin font_3C {
+  font-size: 14px;
+  color: #606266;
+  font-weight: normal;
+}
+
+.font_3C {
+  @include font_3C;
+}
+
+@mixin font_3D {
+  font-size: 14px;
+  color: #909399;
+  font-weight: normal;
+}
+
+.font_3D {
+  @include font_3D;
+}
+
+@mixin font_3E {
+  font-size: 14px;
+  color: #C0C4CC;
+  font-weight: normal;
+}
+
+.font_3E {
+  @include font_3E;
+}
+
+// 四级字体
+@mixin font_4A {
+  font-size: 12px;
+  color: #303133;
+  font-weight: normal;
+}
+
+.font_4A {
+  @include font_4A;
+}
+
+@mixin font_4B {
+  font-size: 12px;
+  color: #606266;
+  font-weight: normal;
+}
+
+.font_4B {
+  @include font_4B;
+}
+
+@mixin font_4C {
+  font-size: 12px;
+  color: #909399;
+  font-weight: normal;
+}
+
+.font_4C {
+  @include font_4C;
+}
+
+@mixin font_4D {
+  font-size: 12px;
+  color: #C0C4CC;
+  font-weight: normal;
+}
+
+.font_4D {
+  @include font_4D;
+}

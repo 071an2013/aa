@@ -1,0 +1,98 @@
+.app-wrapper {
+  .left-pane {
+    background-color: $leftPaneBg;
+    box-shadow: $leftPaneBoxShadow;
+    transition: width 0.28s;
+    width: $leftPaneWidth;
+    position: fixed;
+    top: $topBarHeight;
+    bottom: 0;
+    left: 0;
+    z-index: 1001;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+
+    .logo-wrapper {
+      background-color: $leftPaneLogoBg;
+    }
+
+    &.mobile {
+      transition: width, left 0.28s;
+      top: 0;
+    }
+
+    &.collapsed {
+      width: $leftPaneCollapsedWidth;
+
+      &.mobile {
+        width: $leftPaneWidth;
+        left: -$leftPaneWidth - 20px;
+      }
+    }
+  }
+
+  .left-pane-width {
+    width: $leftPaneWidth !important;
+  }
+
+  .el-aside {
+    width: $leftPaneWidth !important;
+
+    &.collapsed {
+      width: $leftPaneCollapsedWidth !important;
+    }
+  }
+
+  .search-box-wrapper {
+    padding: 5px;
+    padding-top: 10px;
+
+    .el-input__inner {
+      border: none;
+    }
+
+    opacity: .4;
+
+    &:hover,
+    &:focus,
+    &.highlight {
+      opacity: .9 !important;
+    }
+  }
+
+  .side-bar-default-switcher {
+    line-height: 40px;
+    background-color: $topBarBg;
+    text-align: center;
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+
+    &:hover {
+      color: rgba(255, 255, 255, 1);
+    }
+  }
+
+  .side-bar-icon-switcher {
+    cursor: pointer;
+    width: $topBarHeight;
+    text-align: center;
+    line-height: 60px;
+    font-size: 20px;
+    color: #CCC;
+    transform: rotate(180deg);
+
+    >i {
+      transition: all .3s;
+    }
+
+    &:hover {
+      color: #AAA;
+    }
+
+    &.collapsed {
+      transform: rotate(0deg);
+    }
+  }
+}

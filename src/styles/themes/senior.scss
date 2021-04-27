@@ -1,0 +1,166 @@
+@import '~element-ui/lib/theme-chalk/index.css';
+
+// 页面全局样式
+$appBg: #FFF;
+$appTextColor: rgba(0, 0, 0, .65);
+$appFontFamily: Chinese Quote,
+-apple-system,
+BlinkMacSystemFont,
+Segoe UI,
+PingFang SC,
+Hiragino Sans GB,
+Microsoft YaHei,
+Helvetica Neue,
+Helvetica,
+Arial,
+sans-serif,
+Apple Color Emoji,
+Segoe UI Emoji,
+Segoe UI Symbol;
+$appFontSize: 14px;
+$appFontVariant: tabular-nums;
+$appScrollbarColor: rgba(170, 170, 170, .4);
+$appScrollbarSize: 4px;
+$appSelectionBg: #32b332;
+$appSelectionTextColor: #FFF;
+$commonPadding: 1em;
+
+//----------------------------------------------------------------------
+
+// 主菜单
+// 若主菜单仅在顶部、或左侧 -- 则使用 mainMenu 相关配置.
+// 若主菜单同时有顶部与左侧都存在 -- 则使用 topMenu/leftMenu 相关配置
+$mainMenuItemTextColor: #fff;
+$mainMenuItemTextColor_Current: #00B074;
+$mainMenuItemBg_Current:#00B074;
+$mainMenuItemFontSize: 14px;
+$mainMenuItemPadding: 0 1em;
+$mainMenuItemHeight: 62px;
+
+// 顶部栏菜单
+$topMenuItemTextColor: #fff;
+$topMenuItemTextColor_Current: #FFF;
+$topMenuItemBg_Current: rgba(24, 144, 255, 0.8);
+$topMenuItemFontSize: 14px;
+$topMenuItemPadding: 0 1em;
+$topMenuItemHeight: 46px;
+
+// 左侧栏菜单
+$leftMenuItemTextColor: #fff;
+$leftMenuItemTextColor_Current: #FFF;
+$leftMenuItemBg_Current: rgba(24, 144, 255, 0.8);
+$leftMenuItemFontSize: 14px;
+$leftMenuItemPadding: 0 1em;
+$leftMenuItemHeight: 46px;
+
+// 菜单图标
+$menuIconFontSize: 14px;
+$menuIconFontSize_Collapsed: 20px;
+$menuCurrentArrowSize: 8px;
+$menuCurrentArrowColor: #FFF;
+
+//----------------------------------------------------------------------
+
+// 顶部栏
+$topBarBg: #002140;
+$topBarHeight: 84px;
+
+// 左侧栏
+$leftPaneBg: #2B3940;
+$leftPaneLogoBg: #2B3940;
+$leftPaneWidth: 220px;
+$leftPaneCollapsedWidth: 80px;
+$leftPaneBoxShadow: 2px 0 6px rgba(0, 21, 41, .35);
+
+// 主内容区
+$mainContainerPadding: 24px;
+$mainContainerBg: #f0f2f5;
+
+//----------------------------------------------------------------------
+
+// 面包屑样式
+$breadcrumbHeight: 40px;
+$breadcrumbTextColor: #606266;
+$breadcrumbSeparatorColor: #c0c4cc;
+
+// 多页签样式
+$tabsMargin: 0.3em;
+$tabsNavFontSize: 14px;
+$tabsContextMenuBg: #FFF;
+$tabsContextMenuBorder: solid 1px #e4e7ed;
+$tabsContextMenuBorderRadius: 0 0 5px 5px;
+$tabsContextMenuPadding: .4em 0 .4em 0;
+$tabsContextMenuItemHeight: 2em;
+$tabsContextMenuItemIconWidth: 26px;
+$tabsContextMenuItemTextHoverColor: #3092ff;
+
+//----------------------------------------------------------------------
+
+// mask 背景色
+$maskBgColor: rgba(204, 204, 204, 0.35);
+
+// 内容为空时，揭示文本前景色
+$emptyContentTextColor: rgba(255, 255, 255, 0.5);
+
+// footer 样式
+$footerPadding: 12px 4px;
+$footerLineHeight: 1.8em;
+$footerTextColor: #ACACAC;
+
+// 样式覆盖
+.app-wrapper .logo-wrapper{
+  box-shadow: inset 0 -1px 0 0 #253238;
+}
+.app-wrapper .header-left-main-layout .top-bar{
+  box-shadow: inset 0 -1px 0 0 #ECECEC !important;
+}
+.left-main-menu.el-menu{
+  padding-top: 0 !important;
+}
+.left-pane .left-main-menu.el-menu .el-menu-item.is-active{
+  color: #fff !important;
+  & > i{
+    color: #fff !important;
+  }
+}
+.el-submenu .el-menu-item{
+  min-width: auto;
+}
+.app-wrapper .left-menu .left-pane,
+.app-wrapper .left-menu .el-aside{
+  width: 174px !important;
+}
+.app-wrapper .left-menu .collapsed{
+  width: auto !important; 
+}
+.app-wrapper .left-pane{
+  overflow: unset !important;
+}
+
+.left-main-menu{
+  .el-submenu{
+    .el-menu-item,
+    .el-submenu{
+      background: #1E292E;
+      &:hover{
+        background: #1E292E !important;
+      }
+      .el-menu-item{
+        background: #182226;
+      }
+    }
+    .el-submenu > .el-submenu__title,
+    .el-menu-item{
+      height: 52px !important;
+      line-height: 52px !important;
+    }
+    .el-submenu .el-menu .el-menu-item{
+      height: 44px !important;
+      line-height: 44px !important;
+    }
+  }
+}
+.breadcrumb-wrapper{
+  padding: 0 2em !important;
+}
+

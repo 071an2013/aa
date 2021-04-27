@@ -1,0 +1,134 @@
+/**
+ * 常用工具类。
+ */
+
+// 强制隐藏元素.
+.hide,
+.hidden {
+  display: none !important;
+}
+
+// 水平垂直居中.
+.v-middle-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+// 使一行中的所有元素垂直居中。
+// 通过 align-right 可以使某一列的内容同时向右对齐。
+.v-middle-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  >.align-right {
+    text-align: right;
+  }
+}
+
+// 列拆分，分为24份。
+$part: 24;
+
+@for $i from 1 through $part {
+  .col-#{$i} {
+    width: #{100% / $part * $i}
+  }
+}
+
+// 禁止选择内容
+.unselected {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+// 空提示
+.empty-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: $emptyContentTextColor;
+  height: 100%;
+  width: 100%;
+  font-weight: normal;
+  letter-spacing: 1px;
+}
+
+.page-mask {
+  width: 100%;
+  height: 100%;
+  background-color: $maskBgColor;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9;
+}
+
+// 菜单图标样式.
+.menu-icon {
+  margin-right: 4px;
+  font-size: $menuIconFontSize;
+}
+
+// 主内容区动画.
+.fade-enter {
+  opacity: .4;
+}
+
+.fade-enter-to {
+  opacity: 1;
+}
+
+.fade-enter-active {
+  transition: opacity .4s;
+}
+
+.fade-leave,
+.fade-leave-to,
+.fade-leave-active {
+  display: none;
+}
+
+[v-cloak] {
+  display: none;
+}
+
+// 提供一套最精简的列式布局。
+.rad-row {
+  display: flex;
+
+  >div {
+    flex: 1;
+    margin-right: 20px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+// 通用 prop-list 信息展示样式。
+.prop-list {
+  .prop-item {
+    line-height: 2.2em;
+    display: flex;
+
+    .prop-key {
+      width: 120px;
+      color: rgba(0, 0, 0, .85)
+    }
+
+    .prop-value {
+      flex: 1;
+      color: rgba(0, 0, 0, .65)
+    }
+  }
+}

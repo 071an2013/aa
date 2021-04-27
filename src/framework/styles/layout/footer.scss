@@ -1,0 +1,18 @@
+.app-wrapper {
+	.footer{
+    padding: $footerPadding;
+		text-align: center;
+		letter-spacing: 1px;
+		line-height: $footerLineHeight;
+		color: $footerTextColor;
+		.department {
+			padding-left: $commonPadding;
+		}
+		&.mobile {
+			.department {
+				display: block;
+				padding-left: 0px;
+			}
+		}
+	}
+}

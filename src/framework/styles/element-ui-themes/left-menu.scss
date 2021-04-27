@@ -1,0 +1,96 @@
+@mixin left-menu-common(
+	$mainMenuItemTextColor,
+	$mainMenuItemTextColor_Current,
+	$mainMenuItemBg_Current,
+	$mainMenuItemFontSize,
+	$mainMenuItemPadding,
+	$mainMenuItemHeight
+) {
+	border-right: none;
+	background-color: transparent;
+	flex: 1;
+	padding-top: $commonPadding / 4;
+	padding-bottom: $commonPadding * 2;
+	overflow: auto;
+	.el-menu-item, .el-submenu__title{
+		font-size: $mainMenuItemFontSize;
+    color: $mainMenuItemTextColor;
+    > i {
+      color: $mainMenuItemTextColor;
+    }
+		line-height: $mainMenuItemHeight;
+		height: $mainMenuItemHeight;
+		&:hover, &:focus{
+			background-color: transparent;
+			color: $mainMenuItemTextColor_Current;
+			> i {
+				color: $mainMenuItemTextColor_Current;
+			}
+		}
+		&.is-active{
+			background-color: $mainMenuItemBg_Current!important;
+			color: $mainMenuItemTextColor_Current!important;
+      > i {
+        color: $mainMenuItemTextColor_Current!important;
+      }
+		}
+	}
+	.el-submenu{
+		.el-menu-item {
+			padding: $mainMenuItemPadding;
+			font-size: $mainMenuItemFontSize;
+			line-height: $mainMenuItemHeight;
+			height: $mainMenuItemHeight;
+			margin-top: 0px;
+			margin-bottom: 0px;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+		&.is-active{
+			.el-submenu__title,
+      .el-submenu__title > i{
+				color: $mainMenuItemTextColor_Current!important;
+			}
+		}
+		.el-menu{
+			padding: 0px;
+			background: transparent;
+		}
+	}
+	// 菜单折叠后的样式
+	&.el-menu--collapse{
+		width: $leftPaneCollapsedWidth;
+    >.el-menu-item > i,
+    >.el-submenu > .el-submenu__title > i{
+      margin-right: 0px;
+      font-size: $menuIconFontSize_Collapsed;
+    }
+		>.el-menu-item,
+    >.el-submenu > .el-submenu__title{
+			text-align: center;
+		}
+	}
+}
+
+// 左侧菜单样式.
+.left-menu.el-menu {
+	@include left-menu-common(
+		$leftMenuItemTextColor,
+		$leftMenuItemTextColor_Current,
+		$leftMenuItemBg_Current,
+		$leftMenuItemFontSize,
+		$leftMenuItemPadding,
+		$leftMenuItemHeight
+	)
+}
+
+.left-main-menu.el-menu {
+	@include left-menu-common(
+		$mainMenuItemTextColor,
+		$mainMenuItemTextColor_Current,
+		$mainMenuItemBg_Current,
+		$mainMenuItemFontSize,
+		$mainMenuItemPadding,
+		$mainMenuItemHeight
+	)
+}
